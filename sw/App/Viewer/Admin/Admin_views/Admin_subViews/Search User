@@ -1,0 +1,49 @@
+<?php 
+    
+    $_SESSION['url'] = '../..';
+    $_SESSION['logout'] = '../../../Global/';
+    include '../../Tempelates/header.php';
+    include '../../Tempelates/navbar.php';     
+
+?>
+<div class="limiter">
+    
+		<div class="container-login100">
+            <div class="wrap2-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                    <h1 class="text-center" style="margin-bottom: 60px">search user
+                </h1>
+
+                    <div class="container">
+                        
+                        <form class="form-horizontal" action='../../Controller/Admin/Admin Manage User.php?action = search' method="post">
+                           
+                           <?php
+                            if(isset($_Get)){
+                                echo "user not found";
+                            }
+                           ?>
+                            <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+                                <span class="label-input100"  name="name">name</span>
+                                <input class="input100" required="required" type="text" name="name"  placeholder="write username" >
+                                
+					       </div>
+
+                    
+                            <div class="container-login100-form-btn">
+                              <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn"></div>
+                                <button class="login100-form-btn" name="submit">
+                                    <input class="inpt" name="submit"   value="search" >
+                                </button>
+
+                                </div>
+					       </div>
+                            
+                            </form>
+
+
+                        
+            </div>
+            </div>
+    </div>
+</div>
